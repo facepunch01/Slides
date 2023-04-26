@@ -1,5 +1,19 @@
 <script lang="ts">
+  import { Prism } from '@svelteuidev/prism';
   import js from "/src/assets/Unofficial_JavaScript_logo_2.svg";
+  const codeSvelte = `<div on:click={toggle}>`;
+  const codeReact = `<button onClick={sayHello}>`;
+  const codeJS = `element.addEventListener("click", myFunction);`;
+  const exampleCode = 
+  `
+  <div class="w-[100%] relative flex flex-row">
+		<a href="/" class="ml-1 text-4xl text-neutral-50">jake hackl</a>
+		<ul class="align-items-center">
+			<li><a href="/blog" class="text-4xl mr-3 ">blog</a></li>
+			<li><a href="/about" class="btn text-4xl mr-0.5 font-bold text-right uppercase">about</a></li>
+        </ul>
+  </div>
+  `;
 </script>
 <svelte:body on:click={document.body.requestFullscreen}></svelte:body>
 <section id="slide-0" class="w-screen h-screen justify-items-center items-center grid grid-flow-row">
@@ -18,19 +32,51 @@
   <h1 class="text-7xl text-[#f8f8f2]">History was made</h1>
   <a href="#slide-4" class="w-screen h-screen absolute z-10"></a>
 </section>
-<section id="slide-4" class="w-screen h-screen flex justify-center items-center flex-row bg-[#6272a4]">
-  <h1 class="text-5xl text-[#f8f8f2]">element.addEventListener("click", myFunction);</h1>
+<section id="slide-4" class="w-screen h-screen flex justify-center items-center flex-row bg-[#f8f8f2]">
+  <div class="block psm">
+    <Prism copy={false} language="javascript" code={codeJS}></Prism>
+  </div>
   <a href="#slide-5" class="w-screen h-screen absolute z-10"></a>
 </section>
 <section id="slide-5" class="w-screen h-screen flex justify-center items-center flex-row bg-[#f8f8f2]">
-  <div class="block">
-    <h1 class="text-5xl text-[#6272a4]">{`<button onClick={sayHello}>`}</h1>
+  <div class="block psm">
+    <Prism copy={false} language="svelte" code={codeReact}></Prism>
   </div>
   <a href="#slide-6" class="w-screen h-screen absolute z-10"></a>
 </section>
-<section id="slide-6" class="w-screen h-screen flex justify-center items-center flex-row bg-[#f8f8f2] text[#282a36]">
-  <div class="block">
-    <h1 class="text-5xl">{`<div on:click={toggle}>`}</h1>
+<section id="slide-6" class="w-screen h-screen flex justify-center items-center flex-row bg-[#f8f8f2] text-[#282a36]">
+  <div class="block psm">
+    <Prism copy={false} language="svelte" code={codeSvelte}></Prism>
   </div>
+  <a href="#slide-7" class="w-screen h-screen absolute z-10"></a>
+</section>
+<section id="slide-7" class="w-screen h-screen flex justify-center items-center flex-row bg-[#f8f8f2] text-[#282a36]">
+  <div class="w-[100%] relative flex flex-row align-center bg-neutral-900 pt-2 pb-2 navbar">
+		<a href="/" class="ml-1 text-4xl text-neutral-50 font-bold mr-auto uppercase">jake hackl</a>
+		<ul class="hidden list-none sm:flex flex-row border-l-white align-items-center">
+			<li><a href="/blog" class="text-4xl mr-3 text-neutral-50 font-bold text-right uppercase">blog</a></li>
+			<li><a href="/about" class="btn hover:bg-neutral-800 hover:text-neutral-100 bg-neutral-50 text-neutral-900 text-4xl mr-0.5 font-bold text-right uppercase">about</a></li>
+    </ul>
+	</div>
+  <a href="#slide-8" class="w-screen h-screen absolute z-10"></a>
+</section>
+<section id="slide-8" class="w-screen h-screen flex justify-center items-center flex-row bg-[#f8f8f2] text-[#282a36]">
+  <div class="block psm-small">
+    <Prism copy={false} language="svelte" code={exampleCode}></Prism>
+  </div>
+  <a href="#slide-9" class="w-screen h-screen absolute z-10"></a>
+</section>
+<section id="slide-9" class="w-screen h-screen justify-items-center items-center grid grid-flow-row bg-[#282a36]">
+  <h1 class="text-7xl text-[#f8f8f2]">το τέλος</h1>
   <a href="#slide-1" class="w-screen h-screen absolute z-10"></a>
 </section>
+<style>
+  .psm > :global(*) {
+    font-size: 3rem;
+    background-color: inherit;
+  }
+  .psm-small > :global(*) {
+    font-size: 1.3rem;
+    background-color: inherit;
+  }
+</style>
