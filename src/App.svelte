@@ -68,6 +68,12 @@
 </section>
 <section id="slide-9" class="w-screen h-screen justify-items-center items-center grid grid-flow-row bg-[#282a36]">
   <h1 class="text-7xl text-[#f8f8f2]">το τέλος</h1>
+  <a href="#slide-10" class="w-screen h-screen absolute z-10"></a>
+</section>
+<section id="slide-10" class="w-screen h-screen justify-center items-center grid text-white bg-[#282a36] gap-0">
+  <p>Ecma International. “ECMA-262 - Ecma International.” Ecma International, 15 July 2022, www.ecma-international.org/publications-and-standards/standards/ecma-262/. Accessed 18 Apr. 2023.</p>
+  <p>Greif, Sacha, and Eric Burel. “State of JavaScript 2022.” Stateofjs.com, 2022, 2022.stateofjs.com/en-US/. Accessed 18 Apr. 2023.</p>
+  <p>“Netscape.” Archive.org, 2023, web.archive.org/web/20070916144913/wp.netscape.com/newsref/pr/newsrelease67.html. Accessed 18 Apr. 2023.</p>
   <a href="#slide-1" class="w-screen h-screen absolute z-10"></a>
 </section>
 <style>
